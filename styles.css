@@ -722,6 +722,82 @@ nav a {
     color: #555;
     line-height: 1.6;
 }
+/* SECTORES */
+
+.sectores {
+    padding: 80px 10%;
+    background-color: #f5f7fa;
+}
+
+.sectores h2,
+.sectores .seccion-subtitulo {
+    text-align: center;
+}
+
+.contenedor-sectores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.sector {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* NORMAS */
+
+.normas {
+    padding: 80px 10%;
+    background-color: white;
+}
+
+.normas h2,
+.normas .seccion-subtitulo {
+    text-align: center;
+}
+
+.contenedor-normas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.norma {
+    background-color: #f5f7fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* DIFERENCIALES */
+
+.diferenciales {
+    padding: 80px 10%;
+    background-color: #f5f7fa;
+}
+
+.diferenciales h2 {
+    text-align: center;
+}
+
+.contenedor-diferenciales {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.diferencial {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
