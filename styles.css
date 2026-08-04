@@ -1139,90 +1139,205 @@ nav a {
 }
 /* RESPONSIVE */
 
+/* RESPONSIVE: TABLETS Y TELÉFONOS */
+
 @media (max-width: 768px) {
 
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* CABECERA */
+
     header {
+        width: 100%;
         flex-direction: column;
-        gap: 15px;
-        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        padding: 16px 18px;
         text-align: center;
     }
 
-    nav a {
-        margin: 0 12px;
-        display: inline-block;
-        font-size: 15px;
+    header .logo img {
+        height: 44px;
     }
 
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px 14px;
+    }
+
+    nav a {
+        margin: 0;
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    /* PORTADA */
+
     .hero {
-        padding: 70px 20px;
+        width: 100%;
+        padding: 75px 20px 90px;
+        background-position: center;
     }
 
     .hero h1 {
-        font-size: 32px;
+        max-width: 100%;
+        font-size: 34px;
+        line-height: 1.18;
     }
 
+    .hero-etiqueta {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-descripcion,
     .hero p {
+        max-width: 100%;
         font-size: 17px;
+        line-height: 1.5;
     }
-    .sector-item summary {
-        padding: 18px 20px;
-        font-size: 17px;
+
+    /* CÓMO TRABAJAMOS */
+
+    .proceso {
+        width: 100%;
+        padding: 65px 18px;
     }
-    
-    .sector-contenido {
-        padding: 20px;
-        grid-template-columns: 1fr;
+
+    .proceso h2 {
+        margin-bottom: 35px;
     }
+
+    .proceso-grid {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .proceso-card {
+        width: 100%;
+        min-width: 0;
+        padding: 25px;
+    }
+
+    /* SECCIONES GENERALES */
+
+    .metodologia,
+    .servicios,
+    .sectores,
+    .normas,
+    .nosotros,
+    .diferenciales,
+    .resultados,
+    .contacto {
+        width: 100%;
+        padding: 60px 20px;
+    }
+
+    .seccion-subtitulo {
+        font-size: 16px;
+        margin: 16px auto 40px;
+        padding: 0 15px;
+    }
+
+    /* ACORDEONES */
+
+    .acordeon-servicios,
+    .acordeon-sectores,
+    .acordeon-normas {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .acordeon-item summary,
+    .sector-item summary,
     .norma-item summary {
         padding: 18px 20px;
-        font-size: 17px;
+        font-size: 16px;
     }
-    
+
+    .acordeon-contenido {
+        padding: 0 20px 20px;
+    }
+
+    .sector-contenido,
     .norma-contenido {
         padding: 20px;
         grid-template-columns: 1fr;
     }
-    .metodologia,
-    .servicios,
-    .sectores,
-    .nosotros,
-    .resultados,
-    .contacto {
-        padding: 60px 20px;
-    }
+
+    /* SOBRE NOSOTROS */
 
     .nosotros-contenido {
+        width: 100%;
         flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nosotros-texto {
+        min-width: 0;
+        width: 100%;
     }
 
     .nosotros-stats {
+        width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100%;
     }
 
     .stat {
         flex: 1;
-        min-width: 140px;
+        min-width: 180px;
     }
 
+    /* DIFERENCIALES */
+
+    .diferenciales-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* CASOS DE ÉXITO */
+
+    .contenedor-resultados {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 650px;
+    }
+
+    .resultado {
+        min-height: auto;
+    }
+
+    /* CONTACTO */
+
     .contacto-contenedor {
+        width: 100%;
         flex-direction: column;
     }
 
-    .contacto-info {
-        flex: 1;
+    .formulario-contacto {
         width: 100%;
+        min-width: 0;
     }
-    .acordeon-item summary {
-        padding: 18px 20px;
-        font-size: 17px;
+
+    .contacto-info {
+        width: 100%;
+        flex: none;
     }
-    
-    .acordeon-contenido {
-        padding: 0 20px 20px;
-    }
+
+    /* PIE DE PÁGINA */
+
     .footer {
         padding: 40px 20px 0;
     }
@@ -1232,58 +1347,109 @@ nav a {
         gap: 30px;
     }
 
+    .footer .logo img {
+        height: 36px;
+    }
+
+    /* WHATSAPP */
+
     .whatsapp-btn {
         bottom: 20px;
         right: 20px;
         width: 54px;
         height: 54px;
     }
-
-    .seccion-subtitulo {
-        font-size: 16px;
-        margin: 16px auto 40px;
-        padding: 0 15px;
-    }
-
-    header .logo img {
-        height: 40px;
-    }
-
-    .footer .logo img {
-        height: 36px;
-    }
 }
+
+
+/* RESPONSIVE: TELÉFONOS */
 
 @media (max-width: 480px) {
 
+    header {
+        padding: 14px 12px;
+        gap: 12px;
+    }
+
     header .logo img {
-        height: 36px;
+        height: 42px;
     }
 
     nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
+        gap: 7px 12px;
     }
 
     nav a {
-        margin: 0;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 65px 18px 75px;
     }
 
     .hero h1 {
-        font-size: 26px;
+        font-size: 28px;
+        line-height: 1.2;
     }
 
-    .paso {
+    .hero-etiqueta {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .hero-descripcion,
+    .hero p {
+        font-size: 16px;
+    }
+
+    .boton-principal {
         width: 100%;
+        max-width: 310px;
+        padding: 14px 18px;
+        text-align: center;
     }
 
-    .stat-numero {
+    /* UNA TARJETA POR FILA */
+
+    .proceso-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .proceso-card {
+        padding: 24px;
+    }
+
+    .proceso-card span {
         font-size: 32px;
+    }
+
+    .diferenciales-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-resultados {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .nosotros-stats {
+        flex-direction: column;
+    }
+
+    .stat {
+        width: 100%;
+        min-width: 0;
     }
 
     .resultado-valor {
-        font-size: 32px;
+        font-size: 38px;
+    }
+
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        right: 16px;
+        bottom: 16px;
     }
 }
