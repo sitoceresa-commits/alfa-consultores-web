@@ -63,25 +63,64 @@ nav a:hover {
 /* SECCIÓN PRINCIPAL */
 
 .hero {
-    background: linear-gradient(135deg, #0B2545, #134074);
+    background:
+        linear-gradient(
+            rgba(11, 37, 69, 0.45),
+            rgba(19, 64, 116, 0.40)
+        ),
+        url("images/hero.png");
+
+    background-size: cover;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+
     color: white;
     text-align: center;
-    padding: 100px 30px;
+    padding: 120px 30px 160px;
 }
-
 .hero h1 {
-    max-width: 900px;
-    margin: 0 auto 20px;
-    font-size: 48px;
-    line-height: 1.2;
+    max-width: 800px;
+    margin: 0 auto 25px;
+    font-size: 52px;
+    line-height: 1.15;
 }
 
-.hero p {
-    max-width: 720px;
+
+.hero-etiqueta {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #8edb91;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-descripcion {
+    max-width: 760px;
     margin: 0 auto 35px;
     font-size: 20px;
     line-height: 1.6;
     color: #dbe4f0;
+}
+
+.hero-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.hero-secundario {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-secundario:hover {
+    color: #8edb91;
+    transform: translateY(3px);
 }
 
 .boton-principal {
@@ -97,7 +136,66 @@ nav a:hover {
 .boton-principal:hover {
     background: #256428;
 }
+/* CÓMO TRABAJAMOS */
 
+.proceso {
+    padding: 100px 30px;
+    background: #ffffff;
+}
+
+.proceso-etiqueta {
+    color: #2E7D32;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.proceso h2 {
+    text-align: center;
+    color: #0B2545;
+    margin-bottom: 50px;
+}
+
+.proceso-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.proceso-card {
+    padding: 30px;
+    border-radius: 18px;
+    background: #f7f9fc;
+    border-top: 5px solid #2E7D32;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.proceso-card:hover {
+    transform: translateY(-8px);
+}
+
+.proceso-card span {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color: #2E7D32;
+    margin-bottom: 15px;
+}
+
+.proceso-card h3 {
+    color: #0B2545;
+    margin-bottom: 15px;
+}
+
+.proceso-card p {
+    color: #555555;
+    line-height: 1.6;
+}
 /* METODOLOGÍA */
 
 .metodologia {
@@ -150,6 +248,7 @@ nav a:hover {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 /* SERVICIOS CON ACORDEÓN */
@@ -479,9 +578,10 @@ html {
 
 .resultado {
     background: #FFFFFF;
-    padding: 40px 25px;
+    padding: 35px 25px;
     border-radius: 12px;
     text-align: center;
+    min-height: 250px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -493,10 +593,10 @@ html {
 
 .resultado-valor {
     display: block;
-    font-size: 40px;
+    font-size: 44px;
     font-weight: bold;
     color: #134074;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
 
 .resultado p {
