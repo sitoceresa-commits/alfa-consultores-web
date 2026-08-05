@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sitoceresa-commits.github.io/alfa-consultores-web/sitemap.xml
