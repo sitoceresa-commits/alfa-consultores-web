@@ -44,7 +44,7 @@
           content="https://sitoceresa-commits.github.io/alfa-consultores-web/">
 
     <meta property="og:image"
-          content="https://sitoceresa-commits.github.io/alfa-consultores-web/images/hero.png">
+          content="https://sitoceresa-commits.github.io/alfa-consultores-web/images/hero.webp">
 
     <!-- Vista previa en X y otras plataformas -->
 
@@ -58,14 +58,14 @@
           content="Consultoría en ISO, sostenibilidad, ESG, riesgos, OKR y mejora continua.">
 
     <meta name="twitter:image"
-          content="https://sitoceresa-commits.github.io/alfa-consultores-web/images/hero.png">
+          content="https://sitoceresa-commits.github.io/alfa-consultores-web/images/hero.webp">
 
     <link rel="stylesheet"
           href="styles.css">
 
     <link rel="icon"
-          type="image/png"
-          href="images/favicon.png">
+          type="image/webp"
+          href="images/favicon.webp">
           <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -115,12 +115,12 @@
 
     <header>
 
-        
-
         <a href="#" class="logo">
-            <img src="images/logo-alfa.png" alt="ALFA CONSULTORES">
+            <img src="images/logo-alfa.webp" alt="ALFA CONSULTORES">
         </a>
-
+        <button class="menu-toggle">
+        ☰
+        </button>
         <nav>
             <a href="#nosotros">Nosotros</a>
             <a href="#proceso">Cómo trabajamos</a>
@@ -210,7 +210,7 @@
     </section>
 
 
-<section id="servicios" class="servicios">
+<section class="servicios">
 
     <h2 id="servicios">Cómo generamos resultados</h2>
 
@@ -514,9 +514,12 @@
 
         <div class="miembro-card">
 
-            <img src="images/alejandro.png"
+            <img
+                 src="images/alejandro.webp"
                  alt="Alejandro Ceresa"
-                 class="miembro-foto">
+                 class="miembro-foto"
+                 loading="lazy"
+                 decoding="async">
 
             <h3>Alejandro Ceresa</h3>
 
@@ -544,10 +547,12 @@
 
         <div class="miembro-card">
 
-            <img src="images/fabrizio.jpg"
+            <img
+                 src="images/fabrizio.webp"
                  alt="Fabrizio Perazzo"
-                 class="miembro-foto">
-
+                 class="miembro-foto"
+                 loading="lazy"
+                 decoding="async">
             <h3>Fabrizio Perazzo</h3>
 
             <span class="cargo">
@@ -647,7 +652,7 @@
 
         <div class="footer-marca">
             <div class="logo">
-                <img src="images/logo-alfa.png" alt="ALFA CONSULTORES">
+                <img src="images/logo-alfa.webp" alt="ALFA CONSULTORES">
             </div>
             <p>Estrategia, sostenibilidad y resultados. Ese es el método ALFA.</p>
         </div>
@@ -691,9 +696,7 @@
             ".proceso-card, " +
             ".acordeon-item, " +
             ".sector-item, " +
-            ".norma-item, " +
             ".stat, " +
-            ".diferencial-card, " +
             ".contacto-contenedor"
         );
     
@@ -720,7 +723,24 @@
         elementosAnimados.forEach((elemento) => {
             observador.observe(elemento);
         });
-    
+     const botonMenu = document.querySelector(".menu-toggle");
+     const menu = document.querySelector("nav");
+
+    botonMenu.addEventListener("click", () => {
+         menu.classList.toggle("activo");
+
+        const abierto = menu.classList.contains("activo");
+        botonMenu.textContent = abierto ? "✕" : "☰";
+        botonMenu.setAttribute("aria-expanded", abierto);
+     });
+
+    menu.querySelectorAll("a").forEach((enlace) => {
+        enlace.addEventListener("click", () => {
+            menu.classList.remove("activo");
+            botonMenu.textContent = "☰";
+            botonMenu.setAttribute("aria-expanded", "false");
+        });
+    });
     });
     </script>
     
